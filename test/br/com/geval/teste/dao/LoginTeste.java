@@ -5,27 +5,26 @@
  */
 package br.com.geval.teste.dao;
 
-import br.com.geval.dao.ProprietarioDAO;
+import br.com.geval.dao.LoginDAO;
 import br.com.geval.model.Login;
 
 /**
  *
  * @author Gutemberg
  */
-public class ProprietarioTeste {
+public class LoginTeste {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         
-        ProprietarioDAO pDAO = new ProprietarioDAO();
-        System.out.println(pDAO.retornaProprietario(1).getNome());
+        Login l = new Login();
+        l.setUsuario("admin");
+        l.setSenha("admin");
         
-        Login login = new Login();
-        login.setUsuario("admin");
-        login.setSenha("admin");
-        System.out.println(pDAO.retornaProprietario(pDAO.retornaIdProprietarioPorLogin(login)).getNome());
+        LoginDAO lDAO = new LoginDAO();
+        System.out.println(lDAO.validarLogin(l));
     }
     
 }

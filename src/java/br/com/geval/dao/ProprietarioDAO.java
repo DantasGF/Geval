@@ -84,4 +84,22 @@ public class ProprietarioDAO {
         }
         return null;
     }
+    
+    public int retornaIdProprietarioPorLogin(Login login){
+        try {
+            String sql = "SELECT id FROM proprietario "
+                    + "WHERE usuario = ? and senha = ?";
+            PreparedStatement stmt = this.con.prepareStatement(sql);
+            stmt.setString(1, login.getUsuario());
+            stmt.setString(2, login.getSenha());
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return rs.getInt("id");
+            }
+        } catch (SQLException ex) {
+            System.out.println("Erro:ProprietarioDAO:"
+                    + "retornaIdProprietarioPorLogin = " + ex);
+        }
+        return 0;
+    }
 }

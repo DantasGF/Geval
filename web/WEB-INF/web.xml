@@ -8,6 +8,10 @@
         <servlet-name>CadastraEstabelecimento</servlet-name>
         <servlet-class>br.com.geval.controller.CadastraEstabelecimento</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoginProprietario</servlet-name>
+        <servlet-class>br.com.geval.controller.LoginProprietario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>CadastroProprietario</servlet-name>
         <url-pattern>/CadastroProprietario</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>CadastraEstabelecimento</servlet-name>
         <url-pattern>/CadastraEstabelecimento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginProprietario</servlet-name>
+        <url-pattern>/LoginProprietario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

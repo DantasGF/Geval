@@ -1,0 +1,201 @@
+html, body{
+    background: #ebedf0;
+    margin: 0;
+    border: 0;
+}
+
+.caixa-login{
+    background: White;
+    border: 1px Solid #CCC;
+    padding: 20px;
+    width: 400px;
+    height: 300px;
+    margin-top: 150px;
+    box-shadow: 0px 2px 20px #888888;
+    font-family: Arial;
+}
+
+.caixa-login > h1{
+    color: Grey;
+    font-family: Arial;
+}
+
+.caixa-login > span{
+    color: red;
+    font-weight: bold;
+}
+
+.campos{
+    margin-top: 30px;
+}
+
+.campos > input{
+    padding: 10px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+#botao-login{
+    width: 150px;
+}
+
+.barra-inicial{
+    background: White;
+    border: 1px Solid #CCC;
+    height: 70px;
+    box-shadow: 0px 1px 15px #888888;
+}
+
+.barra-inicial > h1{
+    margin-top: 10px;
+    margin-left: 30px;
+    font-family: Arial;
+    color: Gray;
+}
+
+img{
+    vertical-align: baseline;
+}
+
+.links{
+    margin-top: -55px;
+    margin-left: 200px;
+}
+
+.ul, li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-family: Arial;
+    color: black;
+    font-size: 14px;
+}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px Solid #999;
+    background: White;
+    padding: 10px;
+    /*box-shadow: 0px 5px 15px #888888;*/
+}
+
+th{
+    font-family: Arial;
+    border-bottom: 1px Solid #999;
+    font-size: 12px;
+    padding: 15px;
+}
+
+td{
+    font-family: Arial;
+    border: 1px Solid #999;
+    font-size: 12px;
+    text-align: left;
+    padding: 15px;
+}
+
+td > a{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.tabela > h1{
+    text-align: left;
+    margin-left: 11%;
+    font-family: Arial;
+    color: #555;
+}
+
+h1 > img{
+    vertical-align: middle;
+}
+
+.boas-vindas{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 70px;
+    border: 1px Solid #CCC;
+    padding: 10px;
+    font-family: Arial;
+    background: White;
+}
+
+.boas-vindas-titulo{
+    border-bottom: 1px Solid #CCC;
+    padding: 20px;
+    margin-left: -9px;
+    margin-top: -9px;
+    margin-right: -9px;
+    background: White;
+    font-family: Arial;
+}
+
+.boas-vindas-titulo > img{
+    vertical-align: middle;
+}
+
+.boas-vindas-conteudo{
+    padding: 15px;
+}
+
+.dropdown{
+    width: auto;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.conteudo-dropdown{
+    position: absolute;
+    display: none;
+    border: 1px Solid #CCC;
+    background: White;
+    border-radius: 5px;
+}
+
+.conteudo-dropdown > a{
+    float: none;
+    display: block;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.dropdown:hover .conteudo-dropdown{
+    display: block;
+}
+
+.conteudo-dropdown a:hover{
+    background: #CCC;
+}
+
+a > img{
+    vertical-align: top;
+}
+
+.caixa-cadastro{
+    font-family: Arial;
+    background: White;
+    border: 1px Solid #CCC;
+    margin-left: 11%;
+    margin-right: 11%;
+    padding: 10px;
+    box-shadow: 5px 10px 15px #888888;
+}
+
+fieldset{
+    border:1px Solid #888888;
+}
+
+fieldset > input{
+    padding: 5px;
+    width: 90%;
+    margin-top: 20px;
+}
+
+.caixa-cadastro > fieldset{
+    text-align: left;
+}
