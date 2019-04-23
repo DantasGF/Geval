@@ -1,9 +1,12 @@
 package br.com.geval.dao;
 
+import br.com.geval.model.Endereco;
+import br.com.geval.model.Login;
 import br.com.geval.model.Proprietario;
 import br.com.geval.util.ConnectionFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -46,4 +49,39 @@ public class ProprietarioDAO {
         return false;
     }
     
+    public Proprietario retornaProprietario(int id){
+        try {
+            String sql = "SELECT * FROM proprietario WHERE id = ?";
+            PreparedStatement stmt = this.con.prepareStatement(sql);
+            stmt.setInt(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                
+                Endereco endereco = new Endereco();
+                endereco.setRua(rs.getString("rua"));
+                endereco.setBairro(rs.getString("bairro"));
+                endereco.setCidade(rs.getString("cidade"));
+                endereco.setEstado(rs.getString("estado"));
+                
+                Login login = new Login();
+                login.setUsuario(rs.getString("usuario"));
+                login.setSenha(rs.getString("senha"));
+                
+                Proprietario proprietario = new Proprietario();
+                proprietario.setId(rs.getInt("id"));
+                proprietario.setNome(rs.getString("nome"));
+                proprietario.setSobrenome(rs.getString("sobrenome"));
+                proprietario.setSexo(rs.getString("sexo"));
+                proprietario.setTelefone(rs.getString("telefone"));
+                proprietario.setEmail(rs.getString("email"));
+                proprietario.setEndereco(endereco);
+                proprietario.setLogin(login);
+                
+                return proprietario;
+            }
+        } catch (SQLException ex) {
+            System.out.println("Erro:ProprietarioDAO:retornaProprietario = " + ex);
+        }
+        return null;
+    }
 }
